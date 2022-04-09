@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- meta -->
+  <meta name="description" content="Creador de firmas v1.0 para empleados NCR">
+  <meta name="Author" content="Luiggi Llontop">
+
+  <title>Creador de firmas</title>
+
+  <!-- googlefonts - Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Open Sans - Damion -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <div class="cabecera">
+
+    <h1>
+      <a href="/index.html">Signature <span>NCR</span> Creator</a>
+    </h1>
+    <p class="version">version 1.2</p>
+  </div> <!-- fin cabecera -->
+
+  <form id="formulario">
+
+    <label class="label">Nombre</label>
+    <input id="input_nombre" type="text" placeholder="Ingrese su nombre">
+
+    <label class="label">Puesto</label>
+    <input id="input_puesto" type="text" placeholder="Ingrese su puesto">
+
+    <label class="label">Teléfono</label>
+    <input id="input_telefono" type="text" placeholder="Ingrese su teléfono">
+
+    <label class="label">País</label>
+    <input id="input_pais" type="text" placeholder="Ingrese su pais">
+
+    <input type="button" id="btnCrear" value="Crear Firma" onclick="GenerarFirma()">
+
+  </form> <!-- fin formulario -->
+
+  <div class="contenedor-download">
+    <p>Descargar PNG</p>
+    <button id="btnCapturar">
+      <span class="material-icons-outlined">
+        file_download
+      </span>
+    </button>
+  </div> <!-- fin contenedor-dowload -->
+
+  <main>
+    <div id="signature" class="contenedor-firma">
+
+      <img id="imagen-ppal" src="assets/NCR_logo.jpg" alt="imagen firma">
+
+      <div id="identificador">
+        <p class="firma_nombre">Nombre Apellido</p>
+        <p class="firma_puesto">Puesto</p>
+      </div>
+
+      <div id="datos">
+        <div class="info telefono">
+          <span class="material-icons-outlined">phone</span>
+          <p class="firma_telefono">11 2821-6840</p>
+        </div>
+        <div class="info place">
+          <span class="material-icons-outlined">place</span>
+          <p class="firma_pais">Argentina</p>
+        </div>
+        <div class="info web">
+          <span class="material-icons-outlined">language</span>
+          <a href="http://ncr.com" target="_blank">ncr.com</a>
+        </div>
+      </div>
+
+    </div> <!-- fin signature -->
+
+  </main>
+
+  <footer class="footer">
+    Design by <a href="https://github.com/llontopdev">Luiggi Llontop</a>
+  </footer>
+
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
+  <script src="js/create.js"></script>
+  <script src="js/download.js"></script>
+</body>
+
+</html>

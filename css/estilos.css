@@ -1,0 +1,223 @@
+:root{
+  --blanco:#ffffff;
+  --negro: #212121;
+  --gris: #4e4e4e;
+  --gris-claro: #a3a3a3;
+  --primario: #70b34f;
+  --fuente-principal: 'Open Sans', sans-serif;
+  --fuente-by: 'Damion', cursive;
+}
+
+.material-icons-outlined {
+  color: var(--primario);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+html{
+  font-size: 62.5%; /* util para el manejo con rem*/
+  box-sizing: border-box; /* hack para box model*/
+  scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;  
+  margin: 0;
+  padding: 0;
+}
+
+body{    
+  font-size: 16px; /* 1rem = 10px*/
+  font-family: var(--fuente-principal);
+  color: var(--gris);
+  background-color: var(--gris);
+}
+a{
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+/* cabecera */
+.cabecera{
+  background-color: var(--negro);
+  padding: 2rem;
+}
+.cabecera h1{
+  color: var(--blanco);
+  text-align: center;  
+}
+.cabecera h1 span{
+  color: var(--primario);
+}
+
+.version{
+  display: block;
+  text-align: right;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+/* formulario */
+#formulario{
+  padding: 1rem 2rem 2rem 0px; 
+  background-color: var(--negro);
+  color: var(--blanco);
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+input{  
+  margin: 1rem;
+  padding: .8rem;
+  border-radius: 1rem;
+}
+.label{
+  align-self: center;
+  justify-self: flex-end;
+}
+#btnCrear{
+  grid-column: 1/3;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background-color: var(--gris);
+  color: var(--blanco);
+  border: 2px solid var(--primario);
+  justify-self: center;
+  
+  cursor: pointer;  
+}
+#btnCrear:hover{  
+  background-color: #70b34f;
+  border: 2px solid var(--blanco);
+}
+
+
+
+/* contenedor-download */
+.contenedor-download{
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+.contenedor-download p{
+  color: var(--blanco);
+font-size: 1.3rem;
+padding-right: 1rem;
+}
+#btnCapturar{
+  background-color: var(--gris);
+}
+#btnCapturar:hover{
+  opacity: .8;
+}
+
+/* main */
+main{
+  display: flex;
+  background-color: var(--blanco);
+  justify-content: center;  
+}
+
+/* contenedor-firma*/
+.contenedor-firma{
+  background-color: transparent;   
+  justify-content: center;
+  padding: 1rem;
+  display: inline-flex; /* mejora para el screenshot */
+  gap: .8rem;
+}
+#imagen-ppal{
+  width : 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  align-self: center;
+}
+#identificador{
+  min-width: min-content;
+  max-width: max-content;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);  
+  align-items: center;
+}
+.firma_nombre{  
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primario);
+  grid-row: 2;
+}
+.firma_puesto{
+  font-size: 1.1rem;
+  font-weight: 600;
+  grid-row: 3;
+}
+#datos{
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+.info{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.telefono, .place , .web{
+  padding-left: 1rem; 
+  border-left: 2px solid var(--primario);
+}
+.telefono{
+  grid-row: 2;
+}
+.place{
+  grid-row: 3;
+}
+.web{
+  grid-row: 4; 
+}
+.web a{
+  color: var(--negro);
+}
+
+/* footer */
+.footer{  
+  padding-top: 2rem;
+  text-align: center;
+  color: var(--gris-claro);
+  font-size: 1.2rem;
+}
+.footer a{
+  font-family: var(--fuente-by);
+  font-size: 15px;
+}
+.footer a:hover{
+  color: var(--primario);
+}
+
+/* media querys */
+@media (min-width: 640px) {
+   #formulario{
+    grid-template-columns: 15% 35% 15% 35%;
+   }
+   #btnCrear{
+    grid-column: 1/5;
+  }
+  main{
+    padding: 1rem 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cabecera{
+    margin-bottom: 2rem;
+  }
+  #formulario{
+    padding: 3rem;
+    width: 75rem;
+    margin: 0 auto;    
+    justify-content: center;
+    
+    border-radius: 2rem;
+    margin-bottom: 2.5rem;
+  }  
+  
+}
