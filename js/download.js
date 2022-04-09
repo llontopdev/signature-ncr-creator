@@ -9,7 +9,7 @@ $boton.addEventListener("click", () => {
       // Cuando se resuelva la promesa traerá el canvas
       // Crear un elemento <a>
       let enlace = document.createElement('a');
-      enlace.download = "Signature - llontopdev.png";
+      enlace.download = "Signature.png";
       // Convertir la imagen a Base64
       enlace.href = canvas.toDataURL();
       // Hacer click en él
