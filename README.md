@@ -4,20 +4,20 @@ enter your name, position, phone and country and press the create button.
 
 ![](assets/screenshot.png)
 
-<b>v1.2</b>
-ADD
+<h3>v1.2</h3>
+<b>ADD</b>
 
 - a button is added that allows you to download the signature in png format
 
-<b>v1.1</b>
-ADD
+<h3>v1.1</h3>
+<b>ADD</b>
 
 - allows you to edit the phone and the country.
 
-FIX
+<b>FIX</b>
 
 - dimensions are corrected for better navigation from notebooks.
 
-<b>v1.0</b>
+<h3>v1.0</h3>
 
 - enter your name and your position and press the create button.
