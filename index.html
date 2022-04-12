@@ -33,8 +33,34 @@
     <h1>
       <a href="/signature-ncr-creator/">Signature <span>NCR</span> Creator</a>
     </h1>
-    <p class="version">version 1.2</p>
+    <p class="version">version 1.2 <button id="btn-abrir-popup" class="btn-popup-version">?</button></p>
   </div> <!-- fin cabecera -->
+
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+        <span class="material-icons-outlined">
+          close
+        </span>
+      </a>
+      <h3>Notas de version 1.2</h3>
+      <p>
+        Permite a los empleados de NCR Corporation crear firmas fácilmente.
+        <br>
+      </p>
+
+      <ol>
+        <li>Ingrese su nombre, cargo, teléfono y país</li>
+        <img src="assets/cargardatos.png" alt="">
+        <li>Presione el botón crear.</li>
+        <img src="assets/btncrear.png" alt="">
+        <li>Luego puedes descargar la firma generada en un archivo formato PNG.</li>
+        <img src="assets/btndescargar.png" alt="">
+      </ol>
+
+    </div>
+
+  </div>
 
   <h2>Ingrese sus Datos</h2>
   <form id="formulario">
@@ -99,6 +125,7 @@
   <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
   <script src="js/create.js"></script>
+  <script src="js/popup.js"></script>
   <script src="js/download.js"></script>
   <script src="js/validation.js"></script>
 </body>
