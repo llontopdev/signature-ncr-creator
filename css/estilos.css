@@ -1,5 +1,5 @@
-:root{
-  --blanco:#ffffff;
+:root {
+  --blanco: #ffffff;
   --negro: #212121;
   --gris: #4e4e4e;
   --gris-claro: #a3a3a3;
@@ -14,49 +14,69 @@
   font-weight: 400;
 }
 
-html{
-  font-size: 62.5%; /* util para el manejo con rem*/
-  box-sizing: border-box; /* hack para box model*/
+html {
+  font-size: 62.5%;
+  /* util para el manejo con rem*/
+  box-sizing: border-box;
+  /* hack para box model*/
   scroll-snap-type: y mandatory;
 }
 
-*, *:before, *:after{
-  box-sizing: inherit;  
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
-body{    
-  font-size: 16px; /* 1rem = 10px*/
+body {
+  font-size: 16px;
+  /* 1rem = 10px*/
   font-family: var(--fuente-principal);
   color: var(--gris);
   background-color: var(--gris);
 }
-a{
+
+a {
   text-decoration: none;
   color: var(--blanco);
 }
 
 /* cabecera */
-.cabecera{
+.cabecera {
   background-color: var(--negro);
   padding: 2rem;
 }
-.cabecera h1{
+
+.cabecera h1 {
   color: var(--blanco);
-  text-align: center;  
+  text-align: center;
 }
-.cabecera h1 span{
+
+.cabecera h1 span {
   color: var(--primario);
 }
 
-.version{
+.version {
   display: block;
   text-align: right;
   font-size: 1.4rem;
   font-style: italic;
 }
-h2{
+
+.btn-popup-version {
+  color: var(--primario);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--gris);
+  margin-left: .5rem;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+h2 {
   color: var(--blanco);
   text-align: center;
   background-color: var(--negro);
@@ -64,7 +84,7 @@ h2{
 }
 
 /* formulario */
-#formulario{
+#formulario {
   padding-bottom: 2rem;
   background-color: var(--negro);
   color: var(--blanco);
@@ -72,162 +92,259 @@ h2{
   grid-template-columns: 30% 70%;
 }
 
-input{  
+input {
   margin: 1rem 2rem 1rem 1rem;
   padding: .8rem;
   border-radius: 1rem;
 }
-.label{
+
+.label {
   align-self: center;
   justify-self: flex-end;
 }
-#btnCrear{
+
+#btnCrear {
   grid-column: 1/3;
   margin: 1.5rem 0rem 0.5rem 0rem;
   padding: 1rem 2rem;
-  font-size: 2rem;  
-  color: var(--blanco);  
-  justify-self: center;  
+  font-size: 2rem;
+  color: var(--blanco);
+  justify-self: center;
   cursor: pointer;
   background-color: var(--primario);
   border: 2px solid var(--blanco);
   border-radius: 1rem;
   transition: 0.2s all;
 }
-#btnCrear:hover{
+
+#btnCrear:hover {
   background-color: #84ca61;
 }
 
 /* contenedor-download */
-.contenedor-download{
+.contenedor-download {
   display: flex;
   justify-content: center;
- align-items: center;
+  align-items: center;
 }
-.contenedor-download p{
+
+.contenedor-download p {
   color: var(--blanco);
-font-size: 1.3rem;
-padding-right: 1rem;
+  font-size: 1.3rem;
+  padding-right: 1rem;
 }
-#btnCapturar{
+
+#btnCapturar {
   background-color: var(--gris);
 }
-#btnCapturar:hover{
+
+#btnCapturar:hover {
   opacity: .8;
 }
 
 /* main */
-main{
+main {
   display: flex;
   background-color: var(--blanco);
-  justify-content: center;  
+  justify-content: center;
 }
 
 /* contenedor-firma*/
-.contenedor-firma{
-  background-color: transparent;   
+.contenedor-firma {
+  background-color: transparent;
   justify-content: center;
   padding: 1rem;
-  display: inline-flex; /* mejora para el screenshot */
+  display: inline-flex;
+  /* mejora para el screenshot */
   gap: .8rem;
 }
-#imagen-ppal{
-  width : 8rem;
+
+#imagen-ppal {
+  width: 8rem;
   height: 8rem;
   border-radius: 50%;
   align-self: center;
 }
-#identificador{
+
+#identificador {
   min-width: min-content;
   max-width: max-content;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);  
+  grid-template-rows: repeat(4, 1fr);
   align-items: center;
 }
-.firma_nombre{  
+
+.firma_nombre {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primario);
   grid-row: 2;
 }
-.firma_puesto{
+
+.firma_puesto {
   font-size: 1.1rem;
   font-weight: 600;
   grid-row: 3;
 }
-#datos{
+
+#datos {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
 }
-.info{
+
+.info {
   display: flex;
   gap: .5rem;
   align-items: center;
   font-size: 1.1rem;
 }
-.telefono, .place , .web{
-  padding-left: 1rem; 
+
+.telefono,
+.place,
+.web {
+  padding-left: 1rem;
   border-left: 2px solid var(--primario);
 }
-.telefono{
+
+.telefono {
   grid-row: 2;
 }
-.place{
+
+.place {
   grid-row: 3;
 }
-.web{
-  grid-row: 4; 
+
+.web {
+  grid-row: 4;
 }
-.web a{
+
+.web a {
   color: var(--negro);
 }
 
 /* footer */
-.footer{  
+.footer {
   padding-top: 2rem;
   text-align: center;
   color: var(--gris-claro);
   font-size: 1.2rem;
 }
-.footer a{
+
+.footer a {
   font-family: var(--fuente-by);
   font-size: 15px;
 }
-.footer a:hover{
+
+.footer a:hover {
   color: var(--primario);
 }
 
 /* media querys */
 @media (min-width: 640px) {
-   #formulario{
+  #formulario {
     grid-template-columns: 15% 35% 15% 35%;
-   }
-   #btnCrear{
+  }
+
+  #btnCrear {
     grid-column: 1/5;
   }
-  main{
+
+  main {
     padding: 1rem 0px;
   }
 }
 
 @media (min-width: 768px) {
-  .cabecera{
+  .cabecera {
     margin-bottom: 2rem;
   }
-  h2{
+
+  h2 {
     width: 75rem;
     margin: 0 auto;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
   }
-  #formulario{
+
+  #formulario {
     padding: 3rem;
     width: 75rem;
-    margin: 0 auto;    
+    margin: 0 auto;
     justify-content: center;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     margin-bottom: 2.5rem;
-  }  
-  
+  }
+
+}
+
+
+
+
+/* popup */
+.overlay {
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay.active {
+  visibility: visible;
+}
+
+.popup {
+  background: var(--blanco);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .5);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 60rem;
+
+  transition: .5s ease all;
+  transform: scale(.7);
+  opacity: 0;
+}
+
+
+.popup #btn-cerrar-popup {
+  display: block;
+  text-align: right;
+  transition: .5s ease all;
+}
+
+.popup h3 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.popup p {
+  line-height: 2.5rem;
+}
+
+.popup ol {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+  gap: 2rem;
+}
+
+.popup .material-icons-outlined:hover {
+  color: var(--negro);
+}
+
+/* animaciones */
+.popup.active {
+  opacity: 1;
+  transform: scale(1);
 }
