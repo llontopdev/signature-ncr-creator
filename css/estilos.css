@@ -56,10 +56,16 @@ a{
   font-size: 1.4rem;
   font-style: italic;
 }
+h2{
+  color: var(--blanco);
+  text-align: center;
+  background-color: var(--negro);
+  padding: 2rem 0rem;
+}
 
 /* formulario */
 #formulario{
-  padding: 1rem 2rem 2rem 0px; 
+  padding-bottom: 2rem;
   background-color: var(--negro);
   color: var(--blanco);
   display: grid;
@@ -67,7 +73,7 @@ a{
 }
 
 input{  
-  margin: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
   padding: .8rem;
   border-radius: 1rem;
 }
@@ -77,22 +83,20 @@ input{
 }
 #btnCrear{
   grid-column: 1/3;
-  margin-top: 2rem;
+  margin: 1.5rem 0rem 0.5rem 0rem;
   padding: 1rem 2rem;
-  font-size: 2rem;
-  background-color: var(--gris);
-  color: var(--blanco);
-  border: 2px solid var(--primario);
-  justify-self: center;
-  
-  cursor: pointer;  
-}
-#btnCrear:hover{  
-  background-color: #70b34f;
+  font-size: 2rem;  
+  color: var(--blanco);  
+  justify-self: center;  
+  cursor: pointer;
+  background-color: var(--primario);
   border: 2px solid var(--blanco);
+  border-radius: 1rem;
+  transition: 0.2s all;
 }
-
-
+#btnCrear:hover{
+  background-color: #84ca61;
+}
 
 /* contenedor-download */
 .contenedor-download{
@@ -210,13 +214,19 @@ main{
   .cabecera{
     margin-bottom: 2rem;
   }
+  h2{
+    width: 75rem;
+    margin: 0 auto;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
   #formulario{
     padding: 3rem;
     width: 75rem;
     margin: 0 auto;    
     justify-content: center;
-    
-    border-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     margin-bottom: 2.5rem;
   }  
   
